@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071628">
+  <title>Pantalla empresarial demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="top"><a class="brand" href="./"><span class="mark">N</span><span>
+        <small>DISPLAY</small></span></a><span class="pill"><i></i> Demo en vivo</span></header>
+  <main class="layout">
+    <section class="intro">
+      <span class="eyebrow">SEÑALIZACIÓN DIGITAL · DEMOSTRACIÓN</span>
+      <h1>Tu contenido.<br><em>Siempre en pantalla.</em></h1>
+      <p>Esta es una muestra funcional de una pantalla empresarial. Alterna fotos y videos en bucle y se puede publicar
+        directamente con GitHub Pages.</p>
+      <div class="actions"><button class="primary" id="full">⛶ &nbsp; Iniciar pantalla completa</button><button
+          class="secondary" id="restart">↺ &nbsp; Reiniciar ciclo</button></div>
+      <div class="notes"><span>✓ Sin servidor Python</span><span>✓ Fotos + MP4</span><span>✓ Reproducción
+          infinita</span></div>
+    </section>
+    <section class="previewarea" aria-label="Vista previa de la pantalla">
+      <div class="monitor" id="screen">
+        <div class="screen-media"><img id="photo" alt="Contenido de señalización" /><video id="movie" muted playsinline
+            preload="auto"></video></div>
+        <div class="screen-shade"></div>
+        <div class="screen-hud"><span><span class="live-dot"></span> NEXA DISPLAY</span><span id="screen-clock"></span>
+        </div>
+        <div class="screen-footer"><span id="current-title">Cargando contenido…</span><span id="counter">—</span></div>
+        <div class="progress-track">
+          <div id="progress"></div>
+        </div>
+        <button class="exit-full" id="exit" aria-label="Salir de pantalla completa">✕ Salir</button>
+      </div>
+      <div class="previewbar"><span><span class="live-dot"></span> <strong>Reproducción activa</strong></span><span
+          id="status">Cargando lista…</span></div>
+      <div class="queue">
+        <div class="queue-head"><strong>Programación de ejemplo</strong><span>EDITA playlist.json EN GITHUB</span></div>
+        <div id="playlist" class="queue-items"></div>
+      </div>
+    </section>
+  </main>
+  <footer>Demo de señalización digital · Imágenes y marca ficticias para demostración · <span id="year"></span></footer>
+  <script src="player.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+  "items": [
+    {"type": "image", "src": "media/bienvenida.jpg", "duration": 7, "title": "Bienvenida"},
+    {"type": "video", "src": "media/demo.mp4", "title": "Video institucional"},
+    {"type": "image", "src": "media/servicios.jpg", "duration": 8, "title": "Servicios"},
+    {"type": "image", "src": "media/contacto.jpg", "duration": 8, "title": "Contacto"}
+  ]
+}

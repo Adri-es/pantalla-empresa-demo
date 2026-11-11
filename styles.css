@@ -1,0 +1,391 @@
+:root {
+    color-scheme: dark;
+    --ink: #f0f7ff;
+    --muted: #a2b5ce;
+    --teal: #4ad9c5;
+    --bg: #071221;
+    --border: #23354c;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 75% 12%, #123252 0, #071221 53%, #060e1b 100%);
+    color: var(--ink)
+}
+
+button {
+    cursor: pointer;
+    font: inherit
+}
+
+header.top {
+    max-width: 1450px;
+    margin: auto;
+    padding: 32px 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.brand {
+    text-decoration: none;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: .12em
+}
+
+.brand small {
+    font-size: 10px;
+    letter-spacing: .25em;
+    opacity: .65;
+    margin-left: 5px
+}
+
+.mark {
+    display: grid;
+    place-items: center;
+    background: var(--teal);
+    color: #081b2d;
+    height: 43px;
+    width: 43px;
+    border-radius: 13px;
+    font-size: 24px;
+    font-weight: 900
+}
+
+.pill {
+    border: 1px solid #315268;
+    background: #112a39;
+    color: #bce9e1;
+    border-radius: 30px;
+    padding: 9px 15px;
+    font-size: 12px
+}
+
+.pill i,
+.live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #5581e8;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #2bb9d9;
+    margin-right: 7px
+}
+
+.layout {
+    max-width: 1450px;
+    padding: 70px 55px 30px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(300px, .85fr) minmax(500px, 1.35fr);
+    gap: 6%;
+    align-items: center
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: .22em;
+    font-weight: 800;
+    color: var(--teal)
+}
+
+h1 {
+    font-size: clamp(39px, 4.3vw, 69px);
+    letter-spacing: -.055em;
+    line-height: 1.12;
+    margin: 23px 0
+}
+
+h1 em {
+    font-style: normal;
+    color: var(--teal)
+}
+
+.intro p {
+    line-height: 1.85;
+    font-size: 15px;
+    max-width: 475px;
+    color: var(--muted)
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 34px
+}
+
+.actions button {
+    border-radius: 12px;
+    padding: 15px 21px;
+    font-weight: 700;
+    font-size: 13px;
+    min-height: 48px
+}
+
+.primary {
+    background: var(--teal);
+    border: 1px solid var(--teal);
+    color: #06192b
+}
+
+.secondary {
+    background: #10243b;
+    border: 1px solid #2e4259;
+    color: var(--ink)
+}
+
+button:hover {
+    filter: brightness(1.12)
+}
+
+.notes {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    color: #91b5c2;
+    font-size: 11px;
+    margin-top: 25px
+}
+
+.previewarea {
+    min-width: 0
+}
+
+.monitor {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: #080e18;
+    border: 8px solid #1b2e40;
+    outline: 1px solid #39516a;
+    box-shadow: 0 24px 60px #0008;
+    border-radius: 18px;
+    overflow: hidden
+}
+
+.screen-media {
+    position: absolute;
+    inset: 0
+}
+
+.screen-media img,
+.screen-media video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    object-fit: contain;
+    display: none;
+    background: #071323
+}
+
+.screen-media .active {
+    display: block
+}
+
+.screen-shade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, #0005 0%, transparent 24%, transparent 67%, #0009 100%)
+}
+
+.screen-hud,
+.screen-footer {
+    position: absolute;
+    left: 4%;
+    right: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .09em;
+    text-shadow: 0 1px 4px #000
+}
+
+.screen-hud {
+    top: 5%
+}
+
+.screen-footer {
+    bottom: 8%;
+    font-size: 12px
+}
+
+.screen-footer #counter {
+    font-variant-numeric: tabular-nums
+}
+
+.progress-track {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #ffffff35
+}
+
+.progress-track #progress {
+    height: 100%;
+    width: 0;
+    background: var(--teal);
+    transition: none
+}
+
+.exit-full {
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    padding: 10px 14px;
+    background: #000a;
+    border: 1px solid #fff5;
+    color: white;
+    border-radius: 8px
+}
+
+.previewbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 2px;
+    font-size: 12px;
+    color: var(--muted);
+    gap: 10px
+}
+
+.previewbar strong {
+    color: #d8e7ee
+}
+
+.queue {
+    border: 1px solid var(--border);
+    background: #0d1c2f;
+    border-radius: 16px;
+    margin-top: 14px;
+    padding: 18px
+}
+
+.queue-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px
+}
+
+.queue-head span {
+    font-size: 9px;
+    color: #7e9fb6;
+    letter-spacing: .12em
+}
+
+.queue-items {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px
+}
+
+.queue-item {
+    border: 1px solid #253b53;
+    background: #142840;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 11px;
+    color: #bac9dc
+}
+
+.queue-item.on {
+    border-color: #38cfb5;
+    background: #173c48;
+    color: #fff
+}
+
+.queue-item .kind {
+    font-size: 10px;
+    color: #79dacc;
+    margin-right: 6px
+}
+
+footer {
+    max-width: 1450px;
+    margin: 45px auto 10px;
+    padding: 0 55px 30px;
+    font-size: 11px;
+    color: #6e89a0
+}
+
+#screen:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: auto;
+    border: none;
+    outline: none;
+    border-radius: 0
+}
+
+#screen:fullscreen .exit-full {
+    display: block
+}
+
+#screen:fullscreen .screen-hud,
+#screen:fullscreen .screen-footer {
+    font-size: 19px
+}
+
+@media(max-width:950px) {
+    header.top {
+        padding: 22px
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+        padding: 35px 22px;
+        gap: 40px
+    }
+
+    h1 {
+        font-size: 50px
+    }
+
+    footer {
+        padding: 0 22px 22px
+    }
+
+    .monitor {
+        border-width: 5px
+    }
+}
+
+@media(max-width:540px) {
+    h1 {
+        font-size: 40px
+    }
+
+    .queue-head {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .screen-hud,
+    .screen-footer {
+        font-size: 8px
+    }
+
+    .actions button {
+        width: 100%
+    }
+}
